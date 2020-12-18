@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "9Gl-e9-15V"; */
+"9Gl-e9-15V.text" = "Settings";
+
+/* Class = "UIButton"; normalTitle = "X"; ObjectID = "A0I-eR-v3y"; */
+"A0I-eR-v3y.normalTitle" = "X";
+
+/* Class = "UILabel"; text = "Serapis"; ObjectID = "ej7-bz-oAL"; */
+"ej7-bz-oAL.text" = "Serapis";
+
+/* Class = "UILabel"; text = "________________________________"; ObjectID = "gOk-zM-0nT"; */
+"gOk-zM-0nT.text" = "________________________________";
+
+/* Class = "UITextView"; text = "                                                                                                                                                    Loading........"; ObjectID = "hmQ-kH-tgH"; */
+"hmQ-kH-tgH.text" = " Loading........";
+
+/* Class = "UIButton"; normalTitle = "Change Language "; ObjectID = "uLd-Zp-fvu"; */
+"uLd-Zp-fvu.normalTitle" = "Change Language ";
+
+/* Class = "UILabel"; text = "These are the instructions."; ObjectID = "xH3-LI-u9B"; */
+"xH3-LI-u9B.text" = "These are the instructions.";
+
+/* Class = "UIButton"; normalTitle = "Text"; ObjectID = "zAx-aK-JPO"; */
+"zAx-aK-JPO.normalTitle" = "Text";

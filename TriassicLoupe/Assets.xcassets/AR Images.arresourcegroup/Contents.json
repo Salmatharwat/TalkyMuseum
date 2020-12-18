@@ -1,0 +1,20 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "resources" : [
+    {
+      "filename" : "Akhnaton.arreferenceimage"
+    },
+    {
+      "filename" : "Hatshepsut.arreferenceimage"
+    },
+    {
+      "filename" : "Horus.arreferenceimage"
+    },
+    {
+      "filename" : "Serapis.arreferenceimage"
+    }
+  ]
+}
