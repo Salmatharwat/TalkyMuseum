@@ -283,7 +283,10 @@ extension ViewController: ARSessionDelegate {
          case .notAvailable:
            instructionLabel.isHidden = false
            instructionLabel.text = "تتبع الكاميرا غير متاح."
-         }}  }}
+         }
+  
+  }
+  }}
 
 // MARK: -
 extension ViewController: ARSCNViewDelegate {
@@ -334,21 +337,30 @@ extension ViewController: ARSCNViewDelegate {
   }
   
   func parseJSON(_ data:Data , _ textlang : String ) {
+    
     var jsonResult = NSArray()
+    
     do{
+      
       jsonResult = try JSONSerialization.jsonObject(with: data, options:JSONSerialization.ReadingOptions.allowFragments) as! NSArray
+      
       
     } catch let error as NSError {
       print(error)
+      
+      
     }
+    
     var jsonElement = NSDictionary()
     let locations = NSMutableArray()
     
     for i in 0 ..< jsonResult.count
     {
+      
       jsonElement = jsonResult[i] as! NSDictionary
       
       let location = LocationModel()
+      
       //the following insures none of the JsonElement values are nil through optional binding
       if
         let Texts = jsonElement[textlang] as? String
@@ -372,7 +384,11 @@ extension ViewController: ARSCNViewDelegate {
         print(MultiText)
         locations.add(location)
         
-      }}}
+      }
+      
+    }
+    
+  }
   func sendJson( _ statueName : String! , _ langApp : String!){
     flag = Locale.current.languageCode
     var textLang = "EngText"
