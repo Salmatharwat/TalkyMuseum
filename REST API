@@ -1,0 +1,49 @@
+<?php
+
+//Create connection
+$con=mysqli_connect("localhost","id13565266_museum_admin","1dgn)h&M}cEt*T=$","id13565266_museum");
+
+
+// Check connection
+if (mysqli_connect_errno())
+{
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+} 
+ 
+  $Name = $_POST['Name'];
+  $textLang=$_POST['textLang'];
+
+if ($textLang=="ArText") {
+  $query = "SELECT Name, $textLang FROM texts WHERE sid= (SELECT id FROM statue WHERE Name='$Name' )";
+} else {
+ $query = "SELECT Namee, $textLang FROM texts WHERE sid= (SELECT id FROM statue WHERE Name='$Name' )" ;
+}
+
+// Confirm there are results
+if ($result = mysqli_query($con, $query))
+{
+ // We have results, create an array to hold the results
+        // and an array to hold the data
+ $resultArray = array();
+ $tempArray = array();
+ 
+ // Loop through each result
+ while($row = $result->fetch_object())
+ {
+ // Add each result into the results array
+     $tempArray = $row;
+     array_push($resultArray, $tempArray);
+ }
+ 
+ // Encode the array to JSON and output the results
+  $res=json_encode($resultArray, JSON_UNESCAPED_UNICODE);
+
+
+echo $res;
+}
+else echo "failed"."<br>";
+ 
+ 
+// Close connections
+mysqli_close($con);
+?>
